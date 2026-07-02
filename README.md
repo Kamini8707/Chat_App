@@ -32,7 +32,7 @@ RealTalk is a sleek, hyper-professional, real-time communication workspace. Desi
 graph TD
   User[Browser Clients] <-->|Socket.io Connections| Server[Node.js Backend]
   
-  subgraph Frontend (React + Vite)
+  subgraph "Frontend (React + Vite)"
     App[App.jsx Coordinator]
     Login[LoginScreen.jsx]
     Chat[ChatArea.jsx]
@@ -47,7 +47,7 @@ graph TD
     App --> Audio
   end
   
-  subgraph Backend (Express + Socket.io)
+  subgraph "Backend (Express + Socket.io)"
     Store[(In-Memory User State)]
     Server --> Store
   end
