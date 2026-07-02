@@ -34,7 +34,7 @@ export default function LoginScreen({ onLogin }) {
 
     const backendBase = window.location.hostname === 'localhost' 
       ? 'http://localhost:3001' 
-      : `${window.location.protocol}//${window.location.hostname}:3001`;
+      : window.location.origin;
 
     const endpoint = isRegistering ? '/api/register' : '/api/login';
     const payload = isRegistering 
