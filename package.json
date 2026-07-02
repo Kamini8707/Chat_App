@@ -1,0 +1,16 @@
+{
+  "name": "chat-app-parent",
+  "version": "1.0.0",
+  "description": "Premium Real-Time Chat App Parent Orchestrator",
+  "scripts": {
+    "setup": "npm install && cd backend && npm install && cd ../frontend && npm install --legacy-peer-deps",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "dev": "npx concurrently \"npm run backend\" \"npm run frontend\"",
+    "build": "cd frontend && npm install --legacy-peer-deps && npm run build && cd ../backend && npm install",
+    "start": "cd backend && node index.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
